@@ -11,10 +11,12 @@ import java.util.List;
 public class User {
     @Id
     private String id;
+
     @Field(name = "name")
-    @Indexed(unique = true) // for efficient queries
+    @Indexed(unique = true)
     private String userName;
 
+    @Field
     private List<Wallet> wallets;
 
     public User(String id, String userName, List<Wallet> wallets) {
